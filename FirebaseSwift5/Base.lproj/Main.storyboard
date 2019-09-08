@@ -405,10 +405,10 @@
             </objects>
             <point key="canvasLocation" x="1918.840579710145" y="-920.08928571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Clock InVC-->
         <scene sceneID="4t2-Ac-4Ql">
             <objects>
-                <viewController id="784-oP-ZpL" sceneMemberID="viewController">
+                <viewController id="784-oP-ZpL" customClass="ClockInVC" customModule="FirebaseSwift5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hyq-za-Fs9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -447,10 +447,10 @@
             </objects>
             <point key="canvasLocation" x="1483" y="-198"/>
         </scene>
-        <!--View Controller-->
+        <!--Clock OutVC-->
         <scene sceneID="2rv-7O-mII">
             <objects>
-                <viewController id="E1S-MT-pVm" sceneMemberID="viewController">
+                <viewController id="E1S-MT-pVm" customClass="ClockOutVC" customModule="FirebaseSwift5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mBb-hW-ZIu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

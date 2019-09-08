@@ -23,6 +23,8 @@
 		18D9F5572321F3570080C73F /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D9F5562321F3570080C73F /* Device.swift */; };
 		1F9E4D387B5BBB49CE88200D /* Pods_FirebaseSwift5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F740EBC486BF083DD4567BCB /* Pods_FirebaseSwift5.framework */; };
 		50627798E738BE23D818FE6C /* Pods_FirebaseSwift5UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE36854C34928F6901467321 /* Pods_FirebaseSwift5UITests.framework */; };
+		D702E78523251FDE00EA8BC4 /* ClockOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D702E78423251FDE00EA8BC4 /* ClockOutVC.swift */; };
+		D702E78723251FED00EA8BC4 /* ClockInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D702E78623251FED00EA8BC4 /* ClockInVC.swift */; };
 		D72B11AB231A8824006E3FB8 /* NewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72B11AA231A8824006E3FB8 /* NewUserVC.swift */; };
 		D72B11AF231A9066006E3FB8 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72B11AE231A9066006E3FB8 /* FirebaseAuthManager.swift */; };
 		D72B11B1231A980C006E3FB8 /* LogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72B11B0231A980C006E3FB8 /* LogVC.swift */; };
@@ -74,6 +76,8 @@
 		831FCC46C8D8DD9D8208E278 /* Pods-FirebaseSwift5UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSwift5UITests.release.xcconfig"; path = "Target Support Files/Pods-FirebaseSwift5UITests/Pods-FirebaseSwift5UITests.release.xcconfig"; sourceTree = "<group>"; };
 		C747D86E0C7DBF4ADB46AF44 /* Pods_FirebaseSwift5Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseSwift5Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE36854C34928F6901467321 /* Pods_FirebaseSwift5UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseSwift5UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D702E78423251FDE00EA8BC4 /* ClockOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockOutVC.swift; sourceTree = "<group>"; };
+		D702E78623251FED00EA8BC4 /* ClockInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInVC.swift; sourceTree = "<group>"; };
 		D72B11AA231A8824006E3FB8 /* NewUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserVC.swift; sourceTree = "<group>"; };
 		D72B11AE231A9066006E3FB8 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		D72B11B0231A980C006E3FB8 /* LogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogVC.swift; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 				18358F5A23139C4900972C54 /* AppDelegate.swift */,
 				18358F5C23139C4900972C54 /* LoginViewController.swift */,
 				18358F5E23139C4900972C54 /* Main.storyboard */,
+				D702E78423251FDE00EA8BC4 /* ClockOutVC.swift */,
+				D702E78623251FED00EA8BC4 /* ClockInVC.swift */,
 				D72B11B2231A9880006E3FB8 /* settingsVC.swift */,
 				D72B11B0231A980C006E3FB8 /* LogVC.swift */,
 				D72B11AE231A9066006E3FB8 /* FirebaseAuthManager.swift */,
@@ -421,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D702E78523251FDE00EA8BC4 /* ClockOutVC.swift in Sources */,
 				1811133E2317A5A300D9BB6E /* TabViewController.swift in Sources */,
 				D72B11B1231A980C006E3FB8 /* LogVC.swift in Sources */,
 				1811133C2317717B00D9BB6E /* CollectionViewCell.swift in Sources */,
@@ -430,6 +437,7 @@
 				18358F5B23139C4900972C54 /* AppDelegate.swift in Sources */,
 				D72B11AB231A8824006E3FB8 /* NewUserVC.swift in Sources */,
 				1874BFB723154E9000680B8F /* DeviceTabController.swift in Sources */,
+				D702E78723251FED00EA8BC4 /* ClockInVC.swift in Sources */,
 				18D9F5572321F3570080C73F /* Device.swift in Sources */,
 				D72B11B3231A9880006E3FB8 /* settingsVC.swift in Sources */,
 			);

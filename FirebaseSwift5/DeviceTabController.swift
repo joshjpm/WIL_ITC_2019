@@ -51,6 +51,8 @@ class DeviceTabController: UIViewController, UICollectionViewDataSource, UIColle
     
     override func viewDidAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "Devices"
+        loadData()
+
     }
     
     @IBAction func refreshButtonTouch(_ sender: Any) {
