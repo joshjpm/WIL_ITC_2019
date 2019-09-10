@@ -26,6 +26,7 @@ class DeviceTabController: UIViewController, UICollectionViewDataSource, UIColle
     var db : Firestore!
     var devicelist = [Device]()
     var uid = ""
+    var email = ""
     
     override func viewDidLoad() {
         
@@ -37,9 +38,8 @@ class DeviceTabController: UIViewController, UICollectionViewDataSource, UIColle
             let user = Auth.auth().currentUser
             if let user = user {
                 
-                let uid = user.uid
-                let email = user.email
-                
+                uid = user.uid
+//                email = user.email
                
             }
             
@@ -180,6 +180,13 @@ class DeviceTabController: UIViewController, UICollectionViewDataSource, UIColle
     
     
     @IBAction func clockOutDevice(_ sender: Any) {
+        let userID = uid
+        
+        let date = Date()
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let formattedDate = format.string(from: date)
+        print(formattedDate)
         
         let alert = UIAlertController(title: "Enter Device Details Below to Clock Out Your Device", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -202,7 +209,8 @@ class DeviceTabController: UIViewController, UICollectionViewDataSource, UIColle
                 ref = self.db.collection("logs").addDocument(data: [
                     "condition": condition,
                     "project": project,
-                    "uid": self.uid
+                    "uid": userID,
+                    "clockOut": formattedDate
                 ]) { err in
                     if let err = err {
                         print("Error adding document: \(err)")
