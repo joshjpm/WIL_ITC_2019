@@ -317,16 +317,13 @@
                                                     <rect key="frame" x="269" y="38" width="60" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Check In"/>
-                                                    <connections>
-                                                        <segue destination="784-oP-ZpL" kind="show" id="dQO-rv-ZCX"/>
-                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sp-1r-a3v">
                                                     <rect key="frame" x="256" y="69" width="73" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Check Out"/>
                                                     <connections>
-                                                        <segue destination="E1S-MT-pVm" kind="show" id="1pS-Xm-J2k"/>
+                                                        <action selector="clockOutDevice:" destination="7dH-2U-BSb" eventType="touchUpInside" id="FdC-5R-2wU"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

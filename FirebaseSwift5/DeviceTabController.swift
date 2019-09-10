@@ -25,11 +25,25 @@ class DeviceTabController: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet weak var myview: UICollectionView!
     var db : Firestore!
     var devicelist = [Device]()
+    var uid = ""
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         db = Firestore.firestore()
         loadData()
+        
+        if Auth.auth().currentUser != nil {
+            let user = Auth.auth().currentUser
+            if let user = user {
+                
+                let uid = user.uid
+                let email = user.email
+                
+               
+            }
+            
+        }
         
         
         // Do any additional setup after loading the view.
@@ -163,6 +177,57 @@ class DeviceTabController: UIViewController, UICollectionViewDataSource, UIColle
         let initial = storyboard.instantiateInitialViewController()
         UIApplication.shared.keyWindow?.rootViewController = initial
     }
+    
+    
+    @IBAction func clockOutDevice(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Enter Device Details Below to Clock Out Your Device", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        alert.addTextField(configurationHandler: { textField in
+            textField.placeholder = "Device Condition"
+        })
+        alert.addTextField(configurationHandler: { textField in
+            textField.placeholder = "Related Project"
+        })
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            
+            if let condition = alert.textFields?.first?.text, let project = alert.textFields?.last?.text {
+                print("Condition: \(condition)")
+                print("Project: \(project)")
+                
+                // Add a new document with a generated id.
+                var ref: DocumentReference? = nil
+                ref = self.db.collection("logs").addDocument(data: [
+                    "condition": condition,
+                    "project": project,
+                    "uid": self.uid
+                ]) { err in
+                    if let err = err {
+                        print("Error adding document: \(err)")
+                    } else {
+                        print("Document added with ID: \(ref!.documentID)")
+                    }
+                }
+
+                
+            }
+            
+            
+            
+            
+            
+        }))
+        
+        self.present(alert, animated: true)
+        
+        
+        
+        
+    }
+    
+    
     
     /*
     // MARK: - Navigation
